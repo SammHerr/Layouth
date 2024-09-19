@@ -1,0 +1,180 @@
+body {
+    /*background-color: rgb(207, 197, 197);
+    margin: 0;
+    padding: 0;
+    height: 100vh;*/
+}
+
+.Encabezado{
+    background-color: rgb(48, 180, 145);
+    width: 100%;
+    margin: 12px 0px 0px 0px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pieDePagina{
+    background-color: rgb(48, 180, 145);
+    width: 100%;
+    margin: 12px 0px 0px 0px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.contenedor-principal {
+    display: flex;
+    height: 100%;
+}
+
+.principal {
+    min-width: 250px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.principal:first-child {
+    width: 80%;
+    background-color: rgb(94, 185, 199);
+}
+
+.principal:last-child {
+    margin: 0px 0px 0px 12px;
+    width: 20%;
+    background-color: violet;
+    text-align: center;
+}
+
+.principal div {
+    background-color: white;
+    padding: 25px;
+    margin: 20px;
+    flex-grow: 1;
+}
+
+.principal div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.barraBaja{
+    margin: 12px 0px 12px 0px;
+    background-color: #48C9B0;
+    padding: 20px;
+    text-align: center;
+}
+
+.barraBaja-posts {
+    display: flex;
+    justify-content: space-between;
+    /*background-color: #45B39D ;*/
+    color: #fff;
+    padding: 10px 0;
+}
+
+.barraBaja-posts div {
+    background-color: #117A65;
+    margin: 0px 12px 0px 12px;
+    padding: 10px;
+    width: 23%; 
+    text-align: center;
+}
+
+.barraBaja-text {
+    background-color: white;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .Encabezado, .pieDePagina {
+        font-size: 20px;
+    }
+
+    .contenedor-principal {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite que los elementos se acomoden en filas cuando el espacio es pequeño */
+    }
+
+    .principal:first-child {
+        width: 70%; /* Ajusta el tamaño de la sección principal */
+    }
+
+    .principal:last-child {
+        width: 30%; /* Ajusta la barra lateral */
+        margin-left: 0;
+    }
+
+    .principal {
+        padding: 10px;
+    }
+
+    .principal div {
+        margin: 10px;
+    }
+
+    .barraBaja {
+        display: flex;
+        flex-wrap: wrap; /* Esto permite que la barra baja se adapte en varias filas */
+        justify-content: space-between;
+    }
+
+    .barraBaja-posts div {
+        width: 48%; /* Cada post ocupará un 48% del ancho para acomodarse en 2 columnas */
+        margin-bottom: 10px; /* Añadimos margen entre los posts */
+    }
+
+    .pieDePagina {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Encabezado, .pieDePagina {
+        font-size: 16px;
+        width: 100%; /* Encabezado y pie de página ocupan todo el ancho */
+    }
+
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%; /* Se expande al 100% del ancho disponible */
+    }
+
+    .principal {
+        width: 100%; /* Secciones principales ocupan el 100% del ancho */
+        padding: 8px;
+    }
+
+    .principal div {
+        margin: 8px 0; /* Ajusta márgenes para que no generen desplazamientos */
+    }
+
+    .barraBaja {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Asegura que la barra baja ocupe todo el ancho */
+    }
+
+    .barraBaja-posts {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Asegura que los posts ocupen el 100% */
+    }
+
+    .barraBaja-posts div {
+        width: 80%; /* Cada post dentro de la barra baja ocupará el 100% */
+        margin-bottom: 10px;
+    }
+
+    .pieDePagina {
+        font-size: 18px;
+        width: 100%; /* El pie de página también ocupa el 100% del ancho */
+    }
+}
