@@ -117,21 +117,21 @@ body {
         flex-direction: column;
         width: 100%;
         align-items: center;
-        padding: 10px; /* Asegura un espacio interno para el contenedor */
-        box-sizing: border-box; /* Incluye padding en el cálculo del ancho total */
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     .barraBaja-posts {
         display: flex;
         flex-direction: column;
-        width: 100%; /* Ocupa todo el ancho del contenedor */
-        margin: 0; /* Elimina márgenes adicionales para evitar que se salga */
+        width: 100%;
+        margin: 0;
     }
 
     .barraBaja-posts div {
-        width: 100%; /* Cada post dentro de barraBaja ocupa el 100% del ancho */
+        width: 100%;
         margin-bottom: 10px;
-        box-sizing: border-box; /* Garantiza que el padding no desborde el contenedor */
+        box-sizing: border-box; 
     }
 
     .pieDePagina {
@@ -169,28 +169,30 @@ body {
         padding: 8px;
         box-sizing: border-box;
         overflow: hidden; /* Evita el desbordamiento */
+        max-width: 100%; /* Asegura que la barra baja no exceda el ancho */
     }
 
     .barraBaja-posts {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 100%; /* Forzamos el 100% del ancho */
         margin: 0;
+        max-width: 100%; /* Aseguramos que no se desborde del contenedor */
     }
 
     .barraBaja-posts div {
-        width: 100%;
+        width: 100%; /* Aseguramos que cada div ocupe el 100% */
         margin-bottom: 10px;
         box-sizing: border-box;
+        max-width: 100%; /* Evitamos que los posts se salgan del contenedor */
     }
 
     .pieDePagina {
         font-size: 18px;
         width: 100%;
     }
-    
-    /* Asegura que nada exceda el ancho de la pantalla */
+
     body {
-        overflow-x: hidden; /* Evita el desbordamiento horizontal global */
+        overflow-x: hidden;
     }
 }
