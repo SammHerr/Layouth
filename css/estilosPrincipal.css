@@ -93,88 +93,98 @@ body {
 @media screen and (max-width: 768px) {
     .Encabezado, .pieDePagina {
         font-size: 20px;
-    }
-
-    .contenedor-principal {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; /* Permite que los elementos se acomoden en filas cuando el espacio es pequeño */
-    }
-
-    .principal:first-child {
-        width: 70%; /* Ajusta el tamaño de la sección principal */
-    }
-
-    .principal:last-child {
-        width: 30%; /* Ajusta la barra lateral */
-        margin-left: 0;
-    }
-
-    .principal {
-        padding: 10px;
-    }
-
-    .principal div {
-        margin: 10px;
-    }
-
-    .barraBaja {
-        display: flex;
-        flex-wrap: wrap; /* Esto permite que la barra baja se adapte en varias filas */
-        justify-content: space-between;
-    }
-
-    .barraBaja-posts div {
-        width: 48%; /* Cada post ocupará un 48% del ancho para acomodarse en 2 columnas */
-        margin-bottom: 10px; /* Añadimos margen entre los posts */
-    }
-
-    .pieDePagina {
-        font-size: 22px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .Encabezado, .pieDePagina {
-        font-size: 16px;
-        width: 100%; /* Encabezado y pie de página ocupan todo el ancho */
+        width: 100%;
     }
 
     .contenedor-principal {
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        width: 100%; /* Se expande al 100% del ancho disponible */
+        width: 100%;
     }
 
     .principal {
-        width: 100%; /* Secciones principales ocupan el 100% del ancho */
-        padding: 8px;
+        width: 100%;
+        padding: 10px;
     }
 
     .principal div {
-        margin: 8px 0; /* Ajusta márgenes para que no generen desplazamientos */
+        margin: 10px 0;
     }
 
     .barraBaja {
         display: flex;
         flex-direction: column;
-        width: 100%; /* Asegura que la barra baja ocupe todo el ancho */
+        width: 100%;
+        align-items: center;
+        padding: 10px; /* Asegura un espacio interno para el contenedor */
+        box-sizing: border-box; /* Incluye padding en el cálculo del ancho total */
     }
 
     .barraBaja-posts {
         display: flex;
         flex-direction: column;
-        width: 100%; /* Asegura que los posts ocupen el 100% */
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        margin: 0; /* Elimina márgenes adicionales para evitar que se salga */
     }
 
     .barraBaja-posts div {
-        width: 80%; /* Cada post dentro de la barra baja ocupará el 100% */
+        width: 100%; /* Cada post dentro de barraBaja ocupa el 100% del ancho */
         margin-bottom: 10px;
+        box-sizing: border-box; /* Garantiza que el padding no desborde el contenedor */
+    }
+
+    .pieDePagina {
+        font-size: 22px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Encabezado, .pieDePagina {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .principal {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .principal div {
+        margin: 8px 0;
+    }
+
+    .barraBaja {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 8px; /* Espacio interno adicional */
+        box-sizing: border-box; /* Controla el cálculo del ancho para evitar desbordamientos */
+    }
+
+    .barraBaja-posts {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0; /* Evita márgenes exteriores que puedan desbordar el contenedor */
+    }
+
+    .barraBaja-posts div {
+        width: 100%; /* Asegura que cada post ocupe todo el ancho */
+        margin-bottom: 10px;
+        box-sizing: border-box; /* Mantiene el padding y márgenes controlados */
     }
 
     .pieDePagina {
         font-size: 18px;
-        width: 100%; /* El pie de página también ocupa el 100% del ancho */
+        width: 100%;
     }
 }
