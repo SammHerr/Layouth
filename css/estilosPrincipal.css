@@ -166,25 +166,31 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding: 8px; /* Espacio interno adicional */
-        box-sizing: border-box; /* Controla el cálculo del ancho para evitar desbordamientos */
+        padding: 8px;
+        box-sizing: border-box;
+        overflow: hidden; /* Evita el desbordamiento */
     }
 
     .barraBaja-posts {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: 0; /* Evita márgenes exteriores que puedan desbordar el contenedor */
+        margin: 0;
     }
 
     .barraBaja-posts div {
-        width: 100%; /* Asegura que cada post ocupe todo el ancho */
+        width: 100%;
         margin-bottom: 10px;
-        box-sizing: border-box; /* Mantiene el padding y márgenes controlados */
+        box-sizing: border-box;
     }
 
     .pieDePagina {
         font-size: 18px;
         width: 100%;
+    }
+    
+    /* Asegura que nada exceda el ancho de la pantalla */
+    body {
+        overflow-x: hidden; /* Evita el desbordamiento horizontal global */
     }
 }
