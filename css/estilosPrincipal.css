@@ -149,11 +149,10 @@ body {
 
     .principal {
         width: 100%; /* Secciones principales ocupan el 100% del ancho */
-        padding: 8px;
+        padding: 8px 0;
     }
 
     .principal div {
-        width: 100%;
         margin: 8px 0; /* Ajusta márgenes para que no generen desplazamientos */
     }
 
