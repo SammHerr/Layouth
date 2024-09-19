@@ -151,16 +151,20 @@ body {
         flex-direction: column;
         align-items: stretch;
         width: 100%;
-        max-width: 100%;/**/
+        max-width: 100%;
+        padding: 0; /* Elimina cualquier padding que pueda causar desbordamiento */
+        box-sizing: border-box; /* Asegura que el ancho total incluya padding y border */
     }
 
     .principal {
         width: 100%;
         padding: 8px;
+        box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
     }
 
     .principal div {
         margin: 8px 0;
+        box-sizing: border-box;
     }
 
     .barraBaja {
@@ -169,28 +173,32 @@ body {
         width: 100%;
         padding: 8px;
         box-sizing: border-box;
-        overflow: hidden; /* Evita el desbordamiento */
-        max-width: 100%; /* Asegura que la barra baja no exceda el ancho */
+        overflow: hidden;
+        max-width: 100%;
+        margin: 0 auto; /* Centrado horizontal */
     }
 
     .barraBaja-posts {
         display: flex;
         flex-direction: column;
-        width: 100%; /* Forzamos el 100% del ancho */
+        width: 100%;
         margin: 0;
-        max-width: 100%; /* Aseguramos que no se desborde del contenedor */
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .barraBaja-posts div {
-        width: 100%; /* Aseguramos que cada div ocupe el 100% */
+        width: 100%;
         margin-bottom: 10px;
         box-sizing: border-box;
-        max-width: 100%; /* Evitamos que los posts se salgan del contenedor */
+        max-width: 100%;
     }
 
     .pieDePagina {
         font-size: 18px;
         width: 100%;
+        padding: 0 8px; /* Un poco de espacio alrededor */
+        box-sizing: border-box;
     }
 
     body {
