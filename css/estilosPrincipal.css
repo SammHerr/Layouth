@@ -149,7 +149,7 @@ body {
 
     .principal {
         width: 100%; /* Secciones principales ocupan el 100% del ancho */
-        padding: 8px 0;
+        padding: 8px;
     }
 
     .principal div {
